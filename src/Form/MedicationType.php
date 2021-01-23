@@ -16,6 +16,7 @@ class MedicationType extends AbstractType
             ->add('effect')
             ->add('price')
             ->add('insured')
+            ->add('side_effect')
         ;
     }
 

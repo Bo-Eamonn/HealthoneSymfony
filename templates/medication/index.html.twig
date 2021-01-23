@@ -13,6 +13,7 @@
                 <th>Effect</th>
                 <th>Price</th>
                 <th>Insured</th>
+                <th>Side_effect</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <td>{{ medication.effect }}</td>
                 <td>{{ medication.price }}</td>
                 <td>{{ medication.insured ? 'Yes' : 'No' }}</td>
+                <td>{{ medication.sideEffect }}</td>
                 <td>
                     <a href="{{ path('medication_show', {'id': medication.id}) }}">show</a>
                     <a href="{{ path('medication_edit', {'id': medication.id}) }}">edit</a>
@@ -31,7 +33,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
         </tbody>

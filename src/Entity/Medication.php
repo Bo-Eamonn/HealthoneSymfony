@@ -44,6 +44,11 @@ class Medication
      */
     private $recipes;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $side_effect;
+
     public function __construct()
     {
         $this->recipes = new ArrayCollection();
@@ -128,6 +133,18 @@ class Medication
                 $recipe->setMedicine(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSideEffect(): ?string
+    {
+        return $this->side_effect;
+    }
+
+    public function setSideEffect(string $side_effect): self
+    {
+        $this->side_effect = $side_effect;
 
         return $this;
     }
